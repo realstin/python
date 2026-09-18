@@ -83,3 +83,36 @@ print(numberz)
 
 integers = tuple(range(-5,6,1)) #  we made 1 as an increment but also it would work if we don't specify it is their by default
 print(integers)
+
+
+# enumerated and zip functions 
+
+games = ['Football','Volleyball','Basket ball','Hand ball','Tennis']
+
+# if you want to print the  game and track it's index
+
+index = 0
+for game in games:
+    print(f'Index : {index} Game : {game}')
+    index +=1
+# You can use enumerate function to easy work
+
+print(list(enumerate(games)) )   
+
+# or 
+
+for index_1 , game in enumerate(games):
+    print(f'index : {index_1} and game : {game}')
+
+# if you want a starting point 
+for index_1 , game in enumerate(games,2):
+    print(f'index : {index_1} and game : {game}') 
+
+ai_engineers = ['Andrej Karpathy','Ilya Sutskever','Alexandr Wang']
+ids = [1,2,3]
+
+print(list(zip(ids,ai_engineers)))
+
+for name, dev_id in zip(ai_engineers, ids):
+    print(f'Name: {name}')
+    print(f'ID: {dev_id}')
