@@ -114,7 +114,7 @@ for num in range(21):
         even_numbers.append(num)
 print(even_numbers)   
 
-# list comprehensions is the easy way to write the above loop in one line
+# list comprehensions is the easy way to write the above loop in few lines
 
 other_even_numbers = [num for num in range(20,31) if num % 2 == 0]
 print(other_even_numbers)
@@ -130,4 +130,44 @@ for integer in positive_integers:
     else:
         results.append((integer,'Odd'))
 print(results)      
-# the comprehension way is results = [(integer,'Even') if integer % 2 == 0 else (integer,'Odd') for integer in positive_integers] print(results)     
+# the comprehension way is results = [(integer,'Even') if integer % 2 == 0 else (integer,'Odd') for integer in positive_integers] print(results)  
+ 
+# creating a list using filter() it can be used to filter some data in large data sets  basing on a certain situation 
+# filter function is takes two arguments the  which we can take as a requirement or check and then the collection to look from 
+
+words = ['sky','Justin','programmer','developer','code','python']
+
+def is_long_word (word): # function that return true or false
+    return len(word)>5
+
+long_words= list(filter(is_long_word,words))
+print(long_words)
+
+
+# map() function on lists
+
+some_numbers = [1,2,3,4,5,6,7]
+
+def square (number):
+    return number * number
+
+square_of_some_numbers = list(map(square,some_numbers))
+print(square_of_some_numbers)
+
+# sum() function as it's name is used to get the sum of the items in a list or a tuple
+
+numberz = [12,45,56,87,90]
+sum_of_numberz = sum(numberz)
+print(sum_of_numberz)
+
+# you can give it initial value
+print(sum(numberz,start=10))  # or you can only write like this print(sum(numberz,10)) also without start would work
+
+
+# any() and all()
+
+ages = [12,34,56,16]
+print(any(age > 18 for age in ages)) #True
+print(any(age<10 for age in ages) ) #false
+print(all(age > 18 for age in ages)) #False
+print(all(age>10 for age in ages))  #True
