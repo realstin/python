@@ -10,6 +10,8 @@ print(square(9))  # this prints 9 * 9   which is equal to 81
 
 square_root = lambda x : int(x**0.5)
 print(square_root(4))
+# but the reason  for lambda functions is to use anonymous functions so using them like that  
+# assigning a name of it, it is not a  good habit you are using them very bad the reason i did is to show how they work 
 
 #using lambda in higher functions 
 numbers=[1,2,3,4,5,6,7,8,9,10]
