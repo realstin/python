@@ -106,3 +106,28 @@ print(developer_languages_ordered_by_interest.index('Python'))
 # if you want to know the developer frst langauge they are interested in you can use the index method 
 # and other thing to know if the language don't existed it would have returned the value error
 
+#ist Comprehensions
+
+even_numbers = []
+for num in range(21):
+    if num % 2 == 0:
+        even_numbers.append(num)
+print(even_numbers)   
+
+# list comprehensions is the easy way to write the above loop in one line
+
+other_even_numbers = [num for num in range(20,31) if num % 2 == 0]
+print(other_even_numbers)
+
+
+# other example 
+
+positive_integers = [1,2,3,4,5,6,7,8]
+results = []
+for integer in positive_integers:
+    if integer % 2 == 0:
+        results.append((integer,'Even'))
+    else:
+        results.append((integer,'Odd'))
+print(results)      
+# the comprehension way is results = [(integer,'Even') if integer % 2 == 0 else (integer,'Odd') for integer in positive_integers] print(results)     
