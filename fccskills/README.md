@@ -7,4 +7,4 @@ SKILLS                            DESCRIPTION
 
 3. [pin_extractor](https://github.com/realstin/python/blob/main/fccskills/pin_extractor.py)  learn a program that extracts a pin from poem or poems you will use skills such as enumerate , loops  , lists , control flow and others
 
-4. [user_configuration_manager](https://github.com/realstin/python/blob/main/fccskills/user_configuration_manager_py)  learn working with  some ways working with dictonaries , lists , loops , functions and other things using a settings configuration 
+4. [user_configuration_manager](https://github.com/realstin/python/blob/main/fccskills/user_configuration_manager.py)  learn working with  some ways working with dictonaries , lists , loops , functions and other things using a settings configuration 
