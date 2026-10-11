@@ -1,16 +1,16 @@
 # PYTHON ERRORS 
-Here  are errors in python and their cause it can help you to know it and easily know what it means so you fix it without guessing 
+Here are some Python errors and their causes. Knowing what they mean can help you fix them without guessing.
 
 ERROR                            DESCRIPTION
-1. SyntaxError        It occur when the code doesn't follow proper syntax rules. like forgeting the closing blacket on the print function 
-2. NameError          It occurs like when you are trying to access undefined variable
-3. TypeError          It can occur like when you are trying to add int and a string they are different they can't be added so it will return that error
-4. IndexError         As the name say it is when You're trying to access an index that doesn't exist in the list
-5. AttributeError      When you try to use a method or property that doesn't exist for that data type. like when you try to append on int type .
+1. SyntaxError — It occurs when the code doesn't follow proper syntax rules, such as when you forget a closing bracket in a `print` function.
+2. NameError — It occurs when you try to access an undefined variable.
+3. TypeError — It can occur when you try to add an integer and a string. They are different types and can't be added, so Python raises this error.
+4. IndexError — As the name suggests, this occurs when you're trying to access an index that doesn't exist in a list.
+5. AttributeError — This occurs when you try to use a method or property that doesn't exist for that data type, such as trying to call `append` on an integer.
 
 
 
 ## LESSONS
 
-1. Using try , except , else and finally
-2. Using raise statement 
+1. Using `try`, `except`, `else`, and `finally`
+2. Using the `raise` statement

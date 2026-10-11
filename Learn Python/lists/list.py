@@ -85,14 +85,14 @@ print(random_numbers_2)
 print(sorted_random_numbers_2)
 
 
-# print(sorted_random_numbers_2.reverse()) this will return none because some list methods modifies list but don't return the modified one they return  None
+# print(sorted_random_numbers_2.reverse()) will return None because some list methods modify the list but don't return the modified list.
 
-# reversed_sorted_numbers = reversed(sorted_random_numbers_2) this returns the reverse iterotor object that knows to move through the list back word
-print(list(reversed(sorted_random_numbers_2))) # to print the list you can convert them into a list it does not work like sorted()
+# reversed_sorted_numbers = reversed(sorted_random_numbers_2) returns an iterator that moves through the list backward.
+print(list(reversed(sorted_random_numbers_2))) # To print the list, you can convert the iterator into a list. It does not work like sorted().
 
-print(sorted_random_numbers_2) # this is to show you that the reverse didn't change the original one
+print(sorted_random_numbers_2) # This shows that reversed() didn't change the original list.
 
-# if you want to reverse them and change the original one
+# If you want to reverse the list and change the original one:
 
 sorted_random_numbers_2.reverse()
 print(sorted_random_numbers_2)
@@ -103,10 +103,10 @@ print(sorted_random_numbers_2)
 developer_languages_ordered_by_interest= ['Python','Rust','Javascript','Java']
 
 print(developer_languages_ordered_by_interest.index('Python')) 
-# if you want to know the developer frst langauge they are interested in you can use the index method 
-# and other thing to know if the language don't existed it would have returned the value error
+# If you want to know which language the developer is interested in first, you can use the index method.
+# Also, if the language didn't exist, this would return a ValueError.
 
-#ist Comprehensions
+# List comprehensions.
 
 even_numbers = []
 for num in range(21):
@@ -114,13 +114,13 @@ for num in range(21):
         even_numbers.append(num)
 print(even_numbers)   
 
-# list comprehensions is the easy way to write the above loop in few lines
+# List comprehensions are an easy way to write the loop above in a few lines.
 
 other_even_numbers = [num for num in range(20,31) if num % 2 == 0]
 print(other_even_numbers)
 
 
-# other example 
+# Another example.
 
 positive_integers = [1,2,3,4,5,6,7,8]
 results = []
@@ -130,14 +130,14 @@ for integer in positive_integers:
     else:
         results.append((integer,'Odd'))
 print(results)      
-# the comprehension way is results = [(integer,'Even') if integer % 2 == 0 else (integer,'Odd') for integer in positive_integers] print(results)  
+# The comprehension version is results = [(integer, 'Even') if integer % 2 == 0 else (integer, 'Odd') for integer in positive_integers].
  
-# creating a list using filter() it can be used to filter some data in large data sets  basing on a certain situation 
-# filter function is takes two arguments the  which we can take as a requirement or check and then the collection to look from 
+# Creating a list using filter(). It can be used to filter data in large datasets based on a certain condition.
+# The filter function takes two arguments: a function to use as a check and the collection to look through.
 
 words = ['sky','Justin','programmer','developer','code','python']
 
-def is_long_word (word): # function that return true or false
+def is_long_word (word): # Function that returns True or False.
     return len(word)>5
 
 long_words= list(filter(is_long_word,words))
@@ -154,13 +154,13 @@ def square (number):
 square_of_some_numbers = list(map(square,some_numbers))
 print(square_of_some_numbers)
 
-# sum() function as it's name is used to get the sum of the items in a list or a tuple
+# The sum() function, as its name suggests, is used to get the sum of the items in a list or tuple.
 
 numberz = [12,45,56,87,90]
 sum_of_numberz = sum(numberz)
 print(sum_of_numberz)
 
-# you can give it initial value
+# You can give it an initial value.
 print(sum(numberz,start=10))  # or you can only write like this print(sum(numberz,10)) also without start would work
 
 

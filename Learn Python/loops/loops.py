@@ -1,4 +1,4 @@
-#loops
+# Loops.
 
 programming_languages = ['Python','Rust','C++','Javascript','Java','C','PHP']
 
@@ -6,18 +6,18 @@ for language in programming_languages:
     print(language)
 
 
-#for char in 'Developer':   This will print every letter of the word developer on a  new line
+# for char in 'Developer': This will print every letter of the word developer on a new line.
 #   print(char)    
 
 
-# multiplication by 2
+# Multiplication by 2.
 numbers = [1,2,3,4,5,6,7,8,9,10]
 
 for num in numbers:
     print(f'2  *  {num} = {num * 2}')
 
 
-# while loop  it is used for things you don't know the time it would happen 
+# A while loop is useful when you don't know in advance how many repetitions are needed.
 age = 0
 
 while age < 18 :
@@ -27,7 +27,7 @@ while age < 18 :
 
 print("You are eligible")      
 
-# break and continue 
+# Break and continue.
 
 developer_names = [ 'Justin','John','Paul','Jane','Doe']
 
@@ -36,17 +36,17 @@ for developer in developer_names:
         break
     print(developer)
 
-# if you wanted to print Paul you would remove print(developer) from a for loop bod
+# If you wanted to print Paul, you would move print(developer) inside the if block.
 
 
 billionaires = ['Elon Musk','Mark Zuckerberg','Jeff Bezos','Justin Iratuzi','Bill Gates','Alexandr Wang','Cristiano Ronaldo']
-# continue is used to escape something
+# Continue is used to skip to the next iteration of a loop.
 for billinaire in billionaires :
     if billinaire == 'Justin Iratuzi':
         continue
     print(billinaire)
 
-# using else with for and while loops    
+# Using else with for and while loops.
 words = ['sky', 'apple', 'rhythm', 'fly', 'orange']
 
 for word in words:
@@ -58,9 +58,9 @@ for word in words:
         print(f"'{word}' has no vowels")
 
 
-# ranges 
+# Ranges.
 # range(start, stop, step)
-for num in range(3): # the stop is non - inclusive so it will print from 0 to 2 , three will not be included
+for num in range(3): # The stop is non-inclusive, so it will print from 0 to 2. Three will not be included.
     print(num)
 
 for num in range(1, 5):
@@ -69,33 +69,33 @@ for num in range(1, 5):
 for num in range(2, 11, 2):
     print(num)    
 
-# if you don't add an argument in range it will return a type error 
+# If you don't add an argument to range(), it will return a TypeError.
 
-# if you want something in rervese order
+# If you want something in reverse order:
 
 for num in range(60, 0, -10):
     print(num)    
 
-# creating  list or tuples using  range key word 
+# Creating lists or tuples using the range keyword.
 
 numberz = list(range(10))
 print(numberz)
 
-integers = tuple(range(-5,6,1)) #  we made 1 as an increment but also it would work if we don't specify it is their by default
+integers = tuple(range(-5,6,1)) # We used 1 as the increment, but this would also work if we didn't specify it because it is there by default.
 print(integers)
 
 
-# enumerated and zip functions 
+# Enumerate and zip functions.
 
 games = ['Football','Volleyball','Basket ball','Hand ball','Tennis']
 
-# if you want to print the  game and track it's index
+# If you want to print the game and track its index:
 
 index = 0
 for game in games:
     print(f'Index : {index} Game : {game}')
     index +=1
-# You can use enumerate function to easy work
+# You can use the enumerate function to make this easier.
 
 print(list(enumerate(games)) )   
 
@@ -104,7 +104,7 @@ print(list(enumerate(games)) )
 for index_1 , game in enumerate(games):
     print(f'index : {index_1} and game : {game}')
 
-# if you want a starting point 
+# If you want a starting point:
 for index_1 , game in enumerate(games,2):
     print(f'index : {index_1} and game : {game}') 
 

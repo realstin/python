@@ -1,31 +1,31 @@
-# sets are built in python data structures that are unordered , don't store duplicate values 
-#  they only contain values of immutable data types like  numbers , strings ,and tuples
-# and they support mathematical operations like union , intersection , difference and symmetric difference
+# Sets are built-in Python data structures that are unordered and don't store duplicate values.
+# They only contain values of immutable data types, like numbers, strings, and tuples.
+# They support mathematical operations like union, intersection, difference, and symmetric difference.
 
 numbers_set = {1,2,3,4,5,6,7,8}
 
-# empty set 
+# Empty set.
 
 prime_numbers_set = set()
 
 print(numbers_set)
 print(type(prime_numbers_set),type(numbers_set))
 
-random_set = {}  # this is not an empty set it is a dictonary the way to create empty sets is the one on line 9
+random_set = {}  # This is not an empty set; it is a dictionary. The way to create an empty set is shown on line 9.
 print(type(random_set)) # <class 'dict'>
 
-numbers_set.add(9) # it will add 9 in a set if the number already exists sets don's store duplicate values it will keep one set will not change 
+numbers_set.add(9) # This adds 9 to the set. If the number already exists, the set won't change because sets don't store duplicates.
 print(numbers_set)
 
-# to remove an item you can use .discard() or .remove() 
+# To remove an item, you can use .discard() or .remove().
 
-numbers_set.remove(6) # one will be removed for remove if the item don't exist it will return a Key error but discard will not
+numbers_set.remove(6) # One item will be removed. If the item doesn't exist, remove will return a KeyError, but discard will not.
 print(numbers_set)
 
-numbers_set.discard(10) # no error will be returned but if the number is one 1 will be removed from a set 
+numbers_set.discard(10) # No error will be returned. If the number is in the set, it will be removed.
 print(numbers_set)
 
-numbers_set.clear() # the items in the set will be cleared
+numbers_set.clear() # The items in the set will be cleared.
 print(numbers_set) # set()
 
 set_of_integers ={-5,-4,-3,-2,-1,0,1,2,3,4,5}
@@ -38,11 +38,11 @@ print(set_of_integers.issuperset(set_of_negative_integers)) # True
 print(set_of_negative_integers.issubset(set_of_positive_integers)) # False
 print(set_of_positive_integers.issuperset(set_of_negative_integers)) # False
 
-print(set_of_negative_integers.isdisjoint(set_of_positive_integers)) # True it is used to check that the sets have no intersection
+print(set_of_negative_integers.isdisjoint(set_of_positive_integers)) # True. This checks whether the sets have no intersection.
 
 set_of_digits = {0,1,2,3,4,5,6,7,8,9}
 prime_numbers = {2,3,5,7,11,13,17,19}
-print(prime_numbers.isdisjoint(set_of_digits)) # False because there atleast one number in common of the sets
+print(prime_numbers.isdisjoint(set_of_digits)) # False because there is at least one number in common between the sets.
 
 
 
@@ -71,8 +71,8 @@ print(difference_digits_prime)
 symmetric_diff_prime_digits = prime_numbers.symmetric_difference( set_of_digits)
 print(symmetric_diff_prime_digits)
 
-# NOTES , sets should not always become sorted they may come as sorted for smaller numbers but for big numbers
-# they may come when are not sorted  so you may use the built in method .sorted() to sort if you want but it will return the list not the set
+# Note: Sets are not always sorted. They may appear sorted for smaller numbers, but for larger numbers, they may not.
+# You can use the built-in sorted() function to sort them, but it will return a list, not a set.
 
 
 

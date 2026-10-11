@@ -1,7 +1,7 @@
 # creating a class
 
 class Student:
-    # constructor  is used to initialize the  attributes to an object 
+    # A constructor is used to initialize an object's attributes.
     def __init__(self,name,age,field,school):
         self.name = name
         self.age =age
@@ -11,15 +11,15 @@ class Student:
         print(f'I am {self.name} and am {self.age} years old pursuing PhD in {self.field} at {self.school}')    
 
 
-# creating objects from class(  a blueprint)
+# Creating objects from a class (a blueprint).
 student_1 = Student('John Doe',29,'Computer Science','MIT')   
 student_2 = Student('David',21,'Maths and Computer science','Caltech')
 student_1.introduce()     
 student_2.introduce()
 
 # attributes  
-  # instance attributes are variables that are unique for  each object and are set with the __init__ method
-  # class attributes are the variables that are common for all object from a same class
+  # Instance attributes are variables that are unique to each object and are set with the __init__ method.
+  # Class attributes are variables that are common to all objects of the same class.
 
 class Cars :
     company = 'Tesla'
@@ -41,25 +41,25 @@ car_3 = Cars('Cybertruck','RAC 789C')
 print(car_1.company,car_2.company,car_3.company) # tesla * 3 bcz company is the same for all cars
 print(car_1.model,car_2.model,car_3.model) # unique
 
-# methods are function defined in a class look line 30
+# Methods are functions defined in a class. See line 30.
 
 car_1.describe()
 car_2.describe()
 car_3.describe()
 
 
-# special methods also know as magic methods or dunder methods
+# Special methods are also known as magic methods or dunder methods.
 
 print (3 .__add__(4))   # same as print(3+4) or print((3).__add__(4))  
-# and recognize the space after 3 other wise it will take it as if you are writing a float number
+# Note the space after 3; otherwise, Python will interpret it as if you were writing a float number.
 
 print("Hello world".__len__())  # 11
 
-# Think of special methods as the directors of the activities between a person programming and the Python language interpreter itself.
-# Every time you try print(3+4) python under the hood do this as print (3 .__add__(4))
+# Think of special methods as directing interactions between a programmer and the Python language interpreter.
+# When you write print(3+4), Python handles the addition behind the scenes, as if you wrote print(3 .__add__(4)).
 
-# We use this opportunity that when we create our python classes we can customize this methods and do for us what we want
-#  bcz python don't know how to use them on our classes as it does to it's data types take example on the following situation
+# When we create our Python classes, we can customize these methods to do what we want.
+# Python doesn't know how to use them with our classes as it does with its own data types. Consider the following example.
 
 
 class Book:
@@ -71,7 +71,7 @@ book1 = Book("Think Python",244)
 book2 = Book("Introduction to Information Retrieval",581) 
 print(len(book1.name))   # here you specify what you directly want it will work 
 
-# but the situation you want len to give pages 
+# But what if you want len() to return the number of pages?
 
 #  print(len(book1))  This will return TypeError: object of type 'Book' has no len() 
 # to fix it
@@ -90,9 +90,9 @@ print(len(mountain1),"metres")   # prints 8846 metres
 # look in the file fccCartExample.py for advanced example
 
 
-# Dynamically working with object attributes
+# Working with object attributes dynamically.
 
-# this is achieved using the built in functions getattr(), setattr(), hasattr(), and delattr()
+# This is achieved using the built-in functions getattr(), setattr(), hasattr(), and delattr().
 
 class Shoes:
     def __init__(self,brand,name):
@@ -116,10 +116,10 @@ print(getattr(person, attr_name, 'Attribute not found'))   # You can use to inte
 # Listing Attributes With dir()
 
 class Game:
-    def __init__(self,name,players,refrees):
+    def __init__(self,name,players,referees):
         self.name = name
         self.players = players
-        self.refrees = refrees
+        self.referees = referees
 
     def playing(self):
         print(self.name,"is being played")    
@@ -127,7 +127,7 @@ class Game:
 game1 = Game("Football",11,5)
 print(game1.__dict__.keys())
 print(game1.__dict__.values())  
-  # it means object_name.__dict__ return the dictonary of the attributes and their values of the object without using dir()
+  # This means object_name.__dict__ returns a dictionary of the object's attributes and their values without using dir().
 
 
 
@@ -136,22 +136,22 @@ for attr in dir(game1):
         value = getattr(game1,attr)
         print(f'{attr} : {value}')
 
-#  not attr.startswith('__') this helps us to exclude the other attributes  for the object of python 
-#  not callable(getattr(game1,attr)): this helps to ensure that also methods are excluded 
-# because they have no values it can print something like   playing : <bound method Game.playing of <__main__.Game object at 0x0000019865D28590>> 
+# not attr.startswith('__') helps us exclude the other attributes of the Python object.
+# not callable(getattr(game1, attr)) helps ensure that methods are also excluded.
+# Otherwise, it could print something like playing: <bound method Game.playing of <__main__.Game object at 0x0000019865D28590>>.
 
 
 
 
-# they are a lot of socials person can have we don't know them  that is why we create a class  and add pass 
-# to let it and add them later 
+# People can have many social media accounts, and we may not know them all. That is why we create a class with pass
+# and add attributes to it later.
 
 class Socials:
     pass
 
 justin_socials = Socials()
 justin_socials.twitter = "x.com/irmjustin"
-print(justin_socials.twitter)  # direct assignement
+print(justin_socials.twitter)  # Direct assignment.
 
 
 setattr(justin_socials,"github","github.com/irmjustin")
@@ -161,12 +161,12 @@ print(justin_socials.github)
 # if we are google or any other company is going to hire  someone they  may not need his snapchat so to avoid useless data
 # they may need to delete socials like that then they may need to first ensure if it is their before they delete 
 
-# we use hasattr() to check if certain attribute exists
+# We use hasattr() to check whether a certain attribute exists.
 
-print(hasattr(justin_socials,"snapchat")) # False      bcz i didn't have it 
+print(hasattr(justin_socials,"snapchat")) # False because it hasn't been added.
 
 # or simply  using it with delattr
-print(getattr(justin_socials,'tiktok')) # it existed 
+print(getattr(justin_socials,'tiktok')) # It exists.
 if hasattr(justin_socials,'tiktok'):
     delattr(justin_socials,'tiktok')
 

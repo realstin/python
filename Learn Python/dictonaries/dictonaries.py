@@ -1,6 +1,6 @@
-# dictonaries are built-in data structures that store collections of key-value pairs
+# Dictionaries are built-in data structures that store collections of key-value pairs.
 
-# declaring and assigning dictonaries
+# Declaring and assigning dictionaries.
 student = {
     'name':'John Doe',
     'age': 19,
@@ -12,35 +12,35 @@ student = {
 # using dict() constructor
 teacher = dict([('name','Paul'),('age',32),('subject','Mathematics')])
 
-#accessing dictonaries 
+# Accessing dictionaries.
 print(f'{student['name']} is taught {teacher['subject']} by {teacher['name']}')
 
 # updating 
 teacher['name']= 'Emmanuel'
 
-#note that if you use the key that didn't exist it will create the new one or you can use the same way adding the new key 
+# Note that if you use a key that doesn't exist, it will create a new entry. You can add a new key in the same way.
 teacher['degree']=  'Phd in Mathematics'
 
 print(f'{teacher['name']} {teacher['degree']} is {teacher['age']} years old')
 
-# some methods to perform common operatioins on dictonariers
+# Some methods for performing common operations on dictionaries.
 
 print(student.get('hobbies'))
-print(student.get('country')) # if the key specified doesn't exist it will return none  or simply you can set the default value to return if the key doesn't exist
-print(teacher.get('hobbies',[])) # this will return an empty list because hobbies key doesn't exist in teacher dictonary
-print(teacher.get('age',0)) # this will return 32 as age but if the age didn't exist it would have returned 0
+print(student.get('country')) # If the specified key doesn't exist, it will return None. You can also set a default value to return if the key doesn't exist.
+print(teacher.get('hobbies',[])) # This will return an empty list because the hobbies key doesn't exist in the teacher dictionary.
+print(teacher.get('age',0)) # This will return 32 as the age, but if the age didn't exist, it would return 0.
 
 # .keys() and .values()
 
-student_keys = student.keys() # returns the list of the keys in student dictonary
-student_values =student.values()# returns student values
+student_keys = student.keys() # Returns the keys in the student dictionary.
+student_values =student.values()# Returns the student values.
 print(student_keys,student_values)  
 
-# .items() returns both the keys and the values
+# .items() returns both the keys and the values.
 teacher_items = teacher.items()
 print(teacher_items)
 
-# .clear() clears the dictonary
+# .clear() clears the dictionary.
 teacher.clear()
 print(teacher) # empty dictonary
 
@@ -52,14 +52,14 @@ print(student)
 # to prevent the error you can use the return value to be returned if the  key doesn't exist
 student.pop('class',0)  
 
-# .popitem() is used to remove the last itme
+# .popitem() is used to remove the last item.
 print(student)
 student.popitem()
 print(student) # hobbies removed
 
 # update
 
-student.update({'name':"Richard Roe",'country':'Rwanda'}) # country didn't exist it will be new
+student.update({'name':"Richard Roe",'country':'Rwanda'}) # The country key didn't exist, so it will be added.
 print(student)
 
 # looping over a dictonary
@@ -82,14 +82,14 @@ for product in products.items():
 for product,price in products.items():
     print(product,price)    
 
-# if you want to add a discount of 20% to all price 
+# If you want to apply a 20% discount to all prices:
 
 for product , price in products.items():
     products[product] = round(price * 0.8)
 
 print(products)  
 
-# if you want to keep tracking the counter
+# If you want to keep track of the counter:
 for product in enumerate(products):
     print(product)
 for price in enumerate(products.values()):
@@ -101,6 +101,6 @@ for index,product in enumerate(products.items()):
 for index,price in enumerate(products.values()):
     print(index,price)    
 
-# if you want to start from a specific number 
+# If you want to start from a specific number:
 for product in enumerate(products,1):
     print(product)   

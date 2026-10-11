@@ -1,5 +1,4 @@
-# tuples are like list the only difference is that
-#  as lists are mutable the tuples are immutable once created they can't be changed
+# Tuples are like lists. The only difference is that lists are mutable, while tuples are immutable once created.
 
 countries_in_africa = ('Rwanda','Burundi','Tanzania','Kenya','Nigeria',['Morocco','Egypt','Tunisia'])
 
@@ -7,16 +6,16 @@ print(countries_in_africa)
 print(len(countries_in_africa))
 print('France' in countries_in_africa)
 print(f'Arabic African Countries  {countries_in_africa[5]}')
-print(f'First five countries  {countries_in_africa[0:5]}') #It is zero based index also so the five  items if at index 4  and on slicing you know the last index is not printed that's why 6th item on index 5 was no printed
+print(f'First five countries  {countries_in_africa[0:5]}') # Indexing is zero-based, so the fifth item is at index 4. The last index in a slice is not included, which is why the sixth item at index 5 is not printed.
 
-# accesing them is like how we do for lists
+# Accessing tuple items is like accessing list items.
 
 print(countries_in_africa[0])
 print(countries_in_africa[-1])
 
 # countries_in_africa[0]= 'Togo' it will return a type error that tuple doesn't support item assignment
 
-# also you can create a tuple using a tuple() constructor
+# You can also create a tuple using the tuple() constructor.
 
 name = 'Justin'
 print(tuple(name))
@@ -30,14 +29,14 @@ print(field)
 print(degree)
 
 name_of_student,*rest = student
-print(rest) # used to get the  remaining data after filtering data we wanted
+print(rest) # Used to get the remaining data after extracting the data we wanted.
 
 
-#because tuples are not immutable most of methods will return an error if they modify it
+# Because tuples are immutable, most methods that modify them will return an error.
 
 # del countries_in_africa[1] type error that tuple doesn't support item deletion 
 
-# you can try other like  these
+# You can try other methods like these:
 #countries_in_africa[0]= 'Cameroon'
 #countries_in_africa.remove('Rwanda')
 #countries_in_africa.insert(1, 'Algeria')
@@ -47,7 +46,7 @@ print(rest) # used to get the  remaining data after filtering data we wanted
 #countries_in_africa.reverse()
 
 
-# tuples also can contain mutable objects 
+# Tuples can also contain mutable objects.
 
 programmer = ("Justin",['Python','C++','Java'])
 print(programmer)
@@ -60,34 +59,31 @@ print(programmer)
 
 cities = ('Nairobi','Kigali','Kampala','Kinshasa','Bujumbura','Dodoma','Kigali')
 
-# counting the appearance of an item
-print(cities.count('Kigali')) # it would turn an error if no argument added
+# Counting the number of times an item appears.
+print(cities.count('Kigali')) # It would return an error if no argument were added.
 
-# finding the index the item appeared
-print(cities.index('Kigali')) # it returns the first occurence
+# Finding the index where an item appears.
+print(cities.index('Kigali')) # It returns the first occurrence.
 
-# print(cities.index('Cairo')) it will return a value error because 'Cairo' is not found in cities
+# print(cities.index('Cairo')) will return a ValueError because 'Cairo' is not found in cities.
 
-# if you want to check starting from a certain index
+# If you want to search starting from a certain index:
 print(cities.index('Kigali',2))
 
-# you can also pass and index to stop in if you have a range you want to only work with 
+# You can also pass an index to stop at if you have a range you want to work with.
 #print(cities.index('Kigali',2,5)) it will return an error if it is not their 
 
-#sorting  them 
+# Sorting them.
 even_numbers = (2,6,4,12,10,8,20)
 print(sorted(even_numbers))
 
-#reversing them 
+# Reversing them.
 print(sorted(even_numbers,reverse = True))
 
 shoes = ('New Balance','Naked Wolf','Versace','Rebook','Air Force','Jordan','Nike','Puma')
 
 print(sorted(shoes)) # by default it sorts them alphabetically 
 
-#if you want to use your key like length o
+# If you want to use a key such as length:
 
 print(sorted(shoes,key=len)) 
-
-
-

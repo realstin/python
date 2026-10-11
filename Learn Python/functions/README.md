@@ -1,3 +1,3 @@
 ## LESSON REFERENCE
 
-1. Higher order functions [Github Repository]()
+1. Higher-order functions [GitHub Repository]()
