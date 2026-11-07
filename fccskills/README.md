@@ -8,3 +8,5 @@ SKILLS                            DESCRIPTION
 3. [pin_extractor](https://github.com/realstin/python/blob/main/fccskills/pin_extractor.py) Learn to create a program that extracts a PIN from one or more poems. You will use skills such as `enumerate`, loops, lists, control flow, and others.
 
 4. [user_configuration_manager](https://github.com/realstin/python/blob/main/fccskills/user_configuration_manager.py) Learn different ways to work with dictionaries, lists, loops, functions, and other concepts using a settings configuration.
+
+5. [email_simulator](https://github.com/realstin/python/blob/main/fccskills/email_simulator.py) Learn working with classes and objects in advance with building an email_simulator. it uses a module datetime 
