@@ -23,7 +23,6 @@ student_2.introduce()
 
 class Cars :
     company = 'Tesla'
-    print(company)
 
     def __init__(self,model,plate_number):
         self.model =model
@@ -37,7 +36,7 @@ car_1 = Cars('Model 3','RAE 123A')
 car_2 = Cars('Model Y','RAB 456B')   
 car_3 = Cars('Cybertruck','RAC 789C')    
 
-
+print(Cars.company)
 print(car_1.company,car_2.company,car_3.company) # tesla * 3 bcz company is the same for all cars
 print(car_1.model,car_2.model,car_3.model) # unique
 

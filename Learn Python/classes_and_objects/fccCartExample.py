@@ -1,4 +1,4 @@
-# This was an example to look through from Free Code Camp
+# This is an example to look through from Free Code Camp
 
 class Cart:
    def __init__(self):
